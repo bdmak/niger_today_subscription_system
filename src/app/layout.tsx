@@ -2,8 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Scalable Next.js Dashboard',
-  description: 'Built with App Router and Tailwind CSS',
+  title: 'Niger Today Subscription System',
+  description: 'Only for Admin',
 };
 
 export default function RootLayout({
