@@ -54,12 +54,28 @@ export default function CustomersPage() {
         {/* Action Buttons & Test Toggle */}
         <div className="flex items-center justify-between sm:justify-end gap-3">
           {/* Test Button to toggle empty state */}
-          <button
+          {/* <button
             onClick={() => setIsEmptyTest(!isEmptyTest)}
             className="px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition-all"
           >
             {isEmptyTest ? 'Show Sample Data' : 'Test Empty State'}
-          </button>
+          </button> */}
+
+                    <div className="hidden sm:block relative w-64 lg:w-80">
+            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </span>
+            <input
+              type="text"
+              placeholder="Search name, phone or email"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200/80 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#5245E5]"
+            />
+          </div>
 
           <Link 
             href="/customers/new"
@@ -128,21 +144,6 @@ export default function CustomersPage() {
             })}
           </div>
 
-          <div className="hidden sm:block relative w-64 lg:w-80">
-            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-            </span>
-            <input
-              type="text"
-              placeholder="Search name, phone or email"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200/80 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#5245E5]"
-            />
-          </div>
         </div>
       </div>
 
